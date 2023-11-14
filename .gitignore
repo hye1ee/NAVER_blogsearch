@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Data
+data/
+
+# Virtual environments
+venv/
+env/
+*.env/
+
+# Local development settings
+*.env
+
+# Compiled Python files
+*.pyc
+*.pyo
+*.pyd
+
+# Package distribution / build
+dist/
+build/
+*.egg-info/
+
+# Installer logs
+pip-log.txt
+
+# Jupyter Notebook
+.ipynb_checkpoints/
