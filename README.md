@@ -1,3 +1,11 @@
+# NAVER blogsearch
+
+This repository includes source code for **generating a word cloud ☁️** using the **Naver Search API 🔍**. The code retrieves search results from Naver blogs, extracts words from titles and descriptions, and creates a word cloud. Users can view the API response in **JSON 📃** format as well as the resulting word cloud image in **PNG 🖼️** format.
+
+Feedback is always welcome :-) 🌠
+
+<br>
+
 ## Install required libraries
 
 ```bash
@@ -15,16 +23,16 @@ cp .env.example .env # Linux and macOS
 copy .env.example .env # Windows
 ```
 
-- To set client id and password, you need to register your application. Please refer the following [link](https://developers.naver.com/apps/#/register).
+- To set **client id and password**, you need to register your application. Please refer the following [link](https://developers.naver.com/apps/#/register).
 
-- To set JVM path, you need to check your JDK version
+- To set **JVM path**, you need to check your JDK version.
   ```bash
   cd /Library/Java/JavaVirtualMachines
   ls
   ```
-  Choose and remember one version of the indicated list (e.g. zulu-21.jdk), set the JVM path following the format below
+  Choose and remember one version of the indicated list (e.g. zulu-21.jdk), set the JVM path following the format below.
   ```bash
-  JVM_PATH = /Library/Java/JavaVirtualMachines/${JVM_VERSION}/Contents/Home/bin/java'
+  JVM_PATH=/Library/Java/JavaVirtualMachines/${JVM_VERSION}/Contents/Home/bin/java'
   ```
 
 <br />
@@ -34,7 +42,7 @@ copy .env.example .env # Windows
 Get the Naver blog search data and the wordcloud result with following command.
 
 ```bash
-python word*cloud.py --query ${QUERY} --filename ${FILE_NAME} --count ${COUNT}
+python word_cloud.py --query ${QUERY} --filename ${FILE_NAME} --count ${COUNT}
 ```
 
 - **${QUERY}** is the Naver blog search query. No restriction for the query.
@@ -46,5 +54,7 @@ python word*cloud.py --query ${QUERY} --filename ${FILE_NAME} --count ${COUNT}
 python word_cloud.py --query "재테크" --filename "invest" --count 100
 ```
 
-The word cloud is generated based on the title and the description of each contents.
+<img src="word_cloud_ex.png" width="50%" height="50%"/>
+
+The word cloud is generated based on the **title** and the **description** of each contents.
 The JSON data from API request and the image of wordcloud will be stored at `data/`.
