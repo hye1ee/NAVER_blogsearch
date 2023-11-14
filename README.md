@@ -54,7 +54,7 @@ python word_cloud.py --query ${QUERY} --filename ${FILE_NAME} --count ${COUNT}
 python word_cloud.py --query "재테크" --filename "invest" --count 100
 ```
 
-<img src="word_cloud_ex.png" width="50%" height="50%"/>
+<img src="word_cloud.png" width="50%" height="50%"/>
 
 The word cloud is generated based on the **title** and the **description** of each contents.
 The JSON data from API request and the image of wordcloud will be stored at `data/`.
